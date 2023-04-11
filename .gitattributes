@@ -1,1 +1,1 @@
-dist/trust-min.js filter=lfs diff=lfs merge=lfs -text
+dist/front-min.js filter=lfs diff=lfs merge=lfs -text

@@ -73,12 +73,12 @@ class MainActivity : AppCompatActivity() {
                 },
                 isDebug: true
             };
-            trustwallet.ethereum = new trustwallet.Provider(config);
-            trustwallet.solana = new trustwallet.SolanaProvider(config);
-            trustwallet.postMessage = (json) => {
+            frontier.ethereum = new frontier.Provider(config);
+            frontier.solana = new frontier.SolanaProvider(config);
+            frontier.postMessage = (json) => {
                 window._tw_.postMessage(JSON.stringify(json));
             }
-            window.ethereum = trustwallet.ethereum;
+            window.ethereum = frontier.ethereum;
         })();
         """
         return  source

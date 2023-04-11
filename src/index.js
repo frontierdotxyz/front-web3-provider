@@ -11,7 +11,7 @@ import TrustSolanaWeb3Provider from "./solana_provider";
 import TrustCosmosWeb3Provider from "./cosmos_provider";
 import TrustAptosWeb3Provider from "./aptos_provider";
 
-window.trustwallet = {
+window.frontier = {
   Provider: TrustWeb3Provider,
   SolanaProvider: TrustSolanaWeb3Provider,
   CosmosProvider: TrustCosmosWeb3Provider,

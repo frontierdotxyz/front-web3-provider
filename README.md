@@ -10,27 +10,27 @@ TrustWeb3Provider is multi-network web3 provider used by TrustWallet. Currently 
 - Ethereum
 - Solana
 
-## How to Identify Trust Provider
+## How to Identify Frontier Provider
 
-If trust provider injected properly `isTrust` will be `true`
+If front provider injected properly `isFrontier` will be `true`
 
 ```javascript
-window.ethereum.isTrust
+window.ethereum.isFrontier
 // or
-window.trustwallet.solana.isTrust
+window.frontier.ethereum.isFrontier
 ```
 
 ## Installation
 
 ### iOS
 
-TrustWeb3Provider is available through CocoaPods and SPM (locally due to Xcode git lfs issue).
+FrontWeb3Provider is available through CocoaPods and SPM (locally due to Xcode git lfs issue).
 
 CocoaPods
 
 Add this line to your `Podfile`:
 ```ruby
-pod 'TrustWeb3Provider', :git => 'https://github.com/trustwallet/trust-web3-provider', :branch => 'master'
+pod 'TrustWeb3Provider', :git => 'https://github.com/frontierdotxyz/front-web3-provider', :branch => 'master'
 ```
 
 Swift Package Manager
@@ -41,7 +41,7 @@ Add this repo as a `git submodule`, then add it this to your `Package.swift`:
 .package(name: "TrustWeb3Provider", path: "<local path>"),
 ```
 
-Here is an example project located at `ios/TrustWeb3Provider.xcodeproj` to demonstrate how to use this provider.
+Here is an example project located at `ios/FrontWeb3Provider.xcodeproj` to demonstrate how to use this provider.
 
 ### Android
 
@@ -64,7 +64,7 @@ Step 2. Add the dependency
 
 ```groovy
 dependencies {
-    implementation 'com.github.trustwallet:trust-web3-provider:TAG'
+    implementation 'com.github.frontierdotxyz:front-web3-provider:TAG'
 }
 ```
 

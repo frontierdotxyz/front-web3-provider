@@ -60,7 +60,7 @@ class TrustAptosWeb3Provider extends BaseProvider {
     let prefix = "APTOS";
     let address = (await this.account()).address;
 
-    var fullMessage = prefix
+    var fullMessage = prefix;
     let application = window.location.protocol + "//" + window.location.hostname;
     if (payload.address) {
       fullMessage += "\naddress: " + address;

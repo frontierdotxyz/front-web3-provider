@@ -55,7 +55,7 @@ public struct TrustWeb3Provider {
     }
 
     private class dummy {}
-    private let filename = "trust-min"    
+    private let filename = "front-min"    
     public static let scriptHandlerName = "_tw_"
     public let config: Config
 
@@ -93,21 +93,21 @@ public struct TrustWeb3Provider {
                 }
             };
 
-            trustwallet.ethereum = new trustwallet.Provider(config);
-            trustwallet.solana = new trustwallet.SolanaProvider(config);
-            trustwallet.cosmos = new trustwallet.CosmosProvider(config);
-            trustwallet.aptos = new trustwallet.AptosProvider(config);
+            frontier.ethereum = new frontier.Provider(config);
+            frontier.solana = new frontier.SolanaProvider(config);
+            frontier.cosmos = new frontier.CosmosProvider(config);
+            frontier.aptos = new frontier.AptosProvider(config);
 
-            trustwallet.postMessage = (jsonString) => {
+            frontier.postMessage = (jsonString) => {
                 webkit.messageHandlers._tw_.postMessage(jsonString)
             };
 
-            window.ethereum = trustwallet.ethereum;
-            window.keplr = trustwallet.cosmos;
-            window.aptos = trustwallet.aptos;
+            window.ethereum = frontier.ethereum;
+            window.keplr = frontier.cosmos;
+            window.aptos = frontier.aptos;
 
             const getDefaultCosmosProvider = (chainId) => {
-                return trustwallet.cosmos.getOfflineSigner(chainId);
+                return frontier.cosmos.getOfflineSigner(chainId);
             }
 
             window.getOfflineSigner = getDefaultCosmosProvider;

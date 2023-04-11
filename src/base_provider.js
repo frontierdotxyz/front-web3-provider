@@ -12,7 +12,7 @@ class BaseProvider extends EventEmitter {
   constructor(config) {
     super();
     this.isDebug = !!config.isDebug;
-    this.isTrust = true;
+    this.isFrontier = true;
   }
 
   /**
@@ -25,8 +25,8 @@ class BaseProvider extends EventEmitter {
       object: data,
       network: this.providerNetwork,
     };
-    if (window.trustwallet.postMessage) {
-      window.trustwallet.postMessage(object);
+    if (window.frontier.postMessage) {
+      window.frontier.postMessage(object);
     } else {
       console.error("postMessage is not available");
     }
